@@ -1,12 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alemi Herbert">
     <title>Alemi Herbert</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+        body {
+            margin: 0;
+            font-size: 10px;
+            background-color: #ecf6fa;
+            font-family: "Inter", "Roboto", Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        header{
+            background-color:darkslategray
+            
+        }
+
+        .holder {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid darkslategray;
+        }
+
+        .holder h1,
+        nav ul {
+            font-size: 1rem;
+            text-transform: lowercase;
+            margin: 0;
+            padding: 1rem 0;
+        }
+
+        .holder h1 a,
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 0.5rem;
+        }
+
+        nav a:hover {
+            font-weight: bold;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 768px;
+            margin: auto;
+        }
+
+        article {
+            padding: 0 1rem;
+            margin: 4em 0;
+        }
+
+        #intro {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: right;
+            height: 16rem;
+        }
+
+        #notes section, #projects section{
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        }
+
+        .card {
+            border: 1px solid #2f4f4f4e;
+            background-color: #ffffff;
+            font-size: 1rem;
+            padding: 1.5em;
+        }
+
+        .card p {
+            font-size: 0.8rem;
+        }
+
+        .card hr {
+            border: none;
+            border-top: 1px solid #2f4f4f4e;
+        }
+
+        .card h3 {
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            color: white;
+            background-color: #2f4f4f;
+            padding: 3px 6px;
+        }
+
+        article .title {
+            font-size: 1.6rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            line-height: 0;
+            letter-spacing: 2px;
+        }
+
+        article .sub-title {
+            font-size: 0.97rem;
+        }
+    </style>
 </head>
+
 <body>
-    Hello, World!
+    <header>
+        <div class="holder container">
+            <h1>
+                <a href="">Alemi Herbert</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="">Notes</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main class="container">
+        <article id="intro">
+            <section>
+                <h2 class="title">I am the Alemi Herbert</h2>
+                <p class="sub-title">I am a web developer based in Kampala, Uganda</p>
+            </section>
+        </article>
+        <article id="notes">
+            <h2 class="title">Notes</h2>
+            <p class="sub-title">Learnings worth keeping</p><br />
+            <section>
+                <div class="card">
+                    <p>21st January 2022 › 5 min read</p>
+                    <hr>
+                    <h3>How to make a game using JavaScript.</h3>
+                    <span class="tag">Web</span> <span class="tag">JavaScript</span>
+                </div>
+                <div class="card">
+                    <p>21st January 2022 › 5 min read</p>
+                    <hr>
+                    <h3>How to make a game using JavaScript.</h3>
+                    <span class="tag">Web</span> <span class="tag">JavaScript</span>
+                </div>
+                <div class="card">
+                    <p>21st January 2022 › 5 min read</p>
+                    <hr>
+                    <h3>How to make a game using JavaScript.</h3>
+                    <span class="tag">Web</span> <span class="tag">JavaScript</span>
+                </div>
+                <div class="card">
+                    <p>21st January 2022 › 5 min read</p>
+                    <hr>
+                    <h3>How to make a game using JavaScript.</h3>
+                    <span class="tag">Web</span> <span class="tag">JavaScript</span>
+                </div>
+            </section>
+        </article>
+        <article id="projects">
+            <h2 class="title">Projects</h2>
+            <p class="sub-title">A showcase of the stuff I've made</p>
+            <section>
+                <div>
+                    alpha
+                </div>
+                <div>
+                    Beta
+                </div>
+                <div>
+                    delta
+                </div>
+                <div>
+                    gamma
+                </div>
+            </section>
+        </article>
+    </main>
 </body>
+
 </html>

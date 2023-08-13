@@ -19,19 +19,17 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Alemi Herbert
-email: alemiherbert@gmail.com
-description: Civil engineering student who loves to code.
-domain: "alemiherbert.github.io"
+email: alemiherbert
+description: Civil Engineering Student. Loves to code
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "alemiherbert.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://alemiherbert@github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: alemiherbert
 github_username:  alemiherbert
 
 # Build settings
-remote_theme: pages-themes/minimal@v0.2.0
+theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -6,4 +6,4 @@ categories: jekyll update
 author: Alemi Herbert
 ---
 
-The subtle art of not giving a fuck
+The subtle art of not giving a fuck about everything

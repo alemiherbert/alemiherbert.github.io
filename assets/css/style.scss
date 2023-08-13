@@ -1,6 +1,62 @@
----
----
+--- --- @import "{{ site.theme }}";
 
-@import "{{ site.theme }}";
+@import url("https://fonts.googleapis.com/css?family=Londrina+Sketch&display=swap");
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
 
+html {
+    background-image: linear-gradient(to bottom, #59d 0%, #2673bf 100%);
+}
+
+@function blueprint($span: 5, $size: 10, $color-line: #fff) {
+    $val: transparent 0;
+    $c: #fff;
+
+    @for $i from 1 through ceil($span) {
+        $value: $i * $size;
+        $val: #{$val},
+        transparent #{$value - $size}px,
+        transparent #{$value - 1}px;
+
+        @if $i ==1 {
+            $c: rgba($color-line, 0.25);
+        }
+
+        @else {
+            $c: rgba($color-line, 0.1);
+        }
+
+        $val: #{$val}, $c #{$value - 1}px, $c #{$value}px;
+    }
+
+    @return linear-gradient(0deg, $val),
+    linear-gradient(-90deg, $val);
+}
+
+@mixin generator($span: 5, $size: 10, $color: #fff) {
+    $width: $span*$size;
+    background-image: blueprint($span, $size, $color);
+    background-size: #{$width}px #{$width}px;
+}
+
+body {
+    @include generator();
+    //@include generator(3, 20);
+}
+
+h1 {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    font-family: "Londrina Sketch";
+    font-weight: 100;
+    font-size: 5em;
+}

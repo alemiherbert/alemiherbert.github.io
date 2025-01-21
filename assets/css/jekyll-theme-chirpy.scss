@@ -1,0 +1,17 @@
+---
+---
+
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+* {
+  box-shadow: none !important;
+}
+
+#avatar {
+  border-radius: 8px !important;
+}
+/* append your custom style below */
